@@ -124,3 +124,32 @@
   console.log(null === undefined);
   console.log("--------------------------------------");
 }
+
+// 8. 삼항 조건 연산자(?)
+{
+  const a = 20;
+  const b = 15;
+
+  const result = a > b ? "감사합니다" : "안녕하세요";
+  console.log(result);
+}
+
+// 실습 : 표준 체중 테스트 프로그램
+// 홍길동 : 키 180cm, 체중 80kg
+// 표준 체중을 구하는 공식 : (키 - 100) * 0.9
+{
+  //   const userHeight = 180;
+  //   const userWeight = 80;
+  //   const nomalWeight = (userHeight - 100) * 0.9;
+
+  //   console.log(nomalWeight);
+
+  const name = prompt("당신의 이름은?");
+  const height = prompt("당신의 키는?");
+  const weight = prompt("당신의 체중은?");
+  const nomalWeight = (height - 100) * 0.9;
+  const result = weight >= nomalWeight - 5 && weight <= nomalWeight + 5;
+
+  const message = result ? "적정 체중입니다." : "적정 체중이 아닙니다.";
+  document.querySelector(".text").innerHTML = `${name}님은 ${message}`;
+}
