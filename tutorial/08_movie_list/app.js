@@ -50,19 +50,15 @@ const next = document.querySelector(".next");
 
 let current = 0;
 
-next.addEventListener("click", function () {
+next.addEventListener("click", () => {
   current++;
-  if (current > movies.length - 1) {
-    current = 0;
-  }
+  if (current > movies.length - 1) current = 0;
   paintMovie(current);
 });
 
-prev.addEventListener("click", function () {
+prev.addEventListener("click", () => {
   current--;
-  if (current < 0) {
-    current = movies.length - 1;
-  }
+  if (current < 0) current = movies.length - 1;
   paintMovie(current);
 });
 
