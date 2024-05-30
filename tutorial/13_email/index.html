@@ -4,9 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email</title>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="mail_container">
+        <h2>편지 보내기</h2>
+        <form id="contact-form">
+          <label>이름</label>
+          <input type="text" placeholder="이름" name="name" id="userName" />
+          <label>이메일</label>
+          <input type="email" placeholder="이메일" name="email" id="email" />
+          <labe for="내용"></labe>
+          <textarea
+            id="message"
+            name="message"
+            colos="30"
+            rows="10"
+            placeholder="내용"
+          ></textarea>
+          <button type="submit">전송</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="dimm">
+      <i class="xi-spinner-5 xi-spin xi-3x"></i>
+    </div>
+
+    <div class="modal">
+      <span>💌</span>
+      <p>편지를 성공적으로 보냈어요!</p>
+      <button class="close_btn">닫기</button>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("NEnxULi72MNe612b_");
+      })();
+    </script>
     <script src="./app.js"></script>
   </body>
 </html>
